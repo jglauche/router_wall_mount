@@ -1,0 +1,13 @@
+
+system("./router_mount.rb")
+watch( 'router_mount.rb' )  {|md|
+   system("./router_mount.rb")
+}
+
+watch( 'lib/(.*).rb' )  {|md|
+   system("./router_mount.rb")
+}
+
+watch( 'lib/*/(.*).rb' )  {|md|
+   system("./router_mount.rb")
+}
